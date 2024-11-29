@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cifrado César</title>
+		<script src="./assets/js/funcionesExamen3.js" defer></script>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body>
+		<h1>Cifrado César</h1>
+		<form>
+			<fieldset>
+				<legend>Descifrar</legend>
+				<div class="input-wrapper">
+					<label for="language">Alfabeto</label>
+					<select name="language" id="language">
+						<option value="spanish">Castellano</option>
+						<option value="english">Inglés</option>
+					</select>
+				</div>
+
+				<div class="input-wrapper">
+					<label for="text">Texto</label>
+					<textarea name="text" id="text"></textarea>
+				</div>
+
+				<div class="input-wrapper">
+					<label for="level">Nivel de rotado</label>
+					<input type="number" name="level" id="level" />
+				</div>
+				<h2 id="cipher-result"></h2>
+			</fieldset>
+			<button type="submit">Descifrar</button>
+		</form>
+	</body>
+</html>
