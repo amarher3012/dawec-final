@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 2</title>
+		<script src="./assets/funcionesExamen2.js" defer></script>
+		<link rel="stylesheet" href="./assets/styles.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
-    <script src="./assets/funcionesExamen2.js" defer></script>
-    <link rel="stylesheet" href="./assets/styles.css">
-</head>
+	<body>
+		<h1>Configuracion de usuario</h1>
+		<form>
+			<fieldset>
+				<legend>Inicio de sesion</legend>
+				<p>
+					Cuando quieres que Windows te vuelva a pedir que inicies
+					sesion?
+				</p>
+				<select name="login" id="login">
+					<option value="active">
+						Cuando el PC se activa tras haber estado en suspension
+					</option>
+					<option value="never">Nunca</option>
+				</select>
+			</fieldset>
 
-<body>
-    <h1>Configuracion de usuario</h1>
-    <form>
-        <fieldset>
-            <legend>Inicio de sesion</legend>
-            <p>Cuando quieres que Windows te vuelva a pedir que inicies sesion?</p>
-            <select name="login" id="login">
-                <option value="active">Cuando el PC se activa tras haber estado en suspension</option>
-                <option value="never">Nunca</option>
-            </select>
-        </fieldset>
+			<fieldset>
+				<legend>Contrasena</legend>
+				<div class="input-wrapper">
+					<label for="new-password">Nueva contrasena</label>
+					<input
+						type="password"
+						name="new-password"
+						id="new-password"
+					/>
+				</div>
 
-        <fieldset>
-            <legend>Contrasena</legend>
-            <div class="input-wrapper">
-                <label for="new-password">Nueva contrasena</label>
-                <input type="password" name="new-password" id="new-password">
-            </div>
+				<div class="input-wrapper">
+					<label for="new-password-check"
+						>Vuelve a escribir la contrasena</label
+					>
+					<input
+						type="password"
+						name="new-password-check"
+						id="new-password-check"
+					/>
+				</div>
 
-            <div class="input-wrapper">
-                <label for="new-password-check">Vuelve a escribir la contrasena</label>
-                <input type="password" name="new-password-check" id="new-password-check">
-            </div>
+				<div class="input-wrapper">
+					<label for="hint">Indicio de contrasena</label>
+					<textarea name="hint" id="hint"></textarea>
+				</div>
+			</fieldset>
 
-            <div class="input-wrapper">
-                <label for="hint">Indicio de contrasena</label>
-                <textarea name="hint" id="hint"></textarea>
-            </div>
-        </fieldset>
+			<fieldset>
+				<legend>Privacidad</legend>
+				<input type="checkbox" name="privacy" id="privacy" />
+				<label for="privacy"
+					>Mostrar detalles de la cuenta en la pantalla de inicio de
+					sesion</label
+				>
+			</fieldset>
 
-        <fieldset>
-            <legend>Privacidad</legend>
-            <input type="checkbox" name="privacy" id="privacy">
-            <label for="privacy">Mostrar detalles de la cuenta en la pantalla de inicio de sesion</label>
-        </fieldset>
-
-        <button type="submit">Aceptar</button>
-    </form>
-</body>
-
+			<button type="submit">Aceptar</button>
+		</form>
+	</body>
 </html>
