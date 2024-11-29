@@ -1,4 +1,4 @@
-// Ejercicio 2 html objects
+// Ejercicio 2 html elements
 const form = document.querySelector('form');
 
 // Ejercicio 2

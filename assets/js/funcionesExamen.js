@@ -1,4 +1,4 @@
-// Ejercicio 1 html objects
+// Ejercicio 1 html elements
 const curiousExec = document.getElementById('first');
 
 // Ejercicio 1
@@ -7,7 +7,7 @@ const curiousNumbers = () => {
 	let sum = 0;
 	let res = [];
 
-	for (let i = 1; i <= 999999999; i++) {
+	for (let i = 1; i <= 999; i++) {
 		num = i.toString().split('').map(Number);
 		for (let j = 0; j < num.length; j++) {
 			sum += Math.pow(num[j], 3);
