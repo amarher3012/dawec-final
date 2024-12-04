@@ -26,6 +26,6 @@ label {
 	width: 35%;
 }
 
-.cypher-result {
+#cipher-result {
 	color: red;
 }
