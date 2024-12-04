@@ -8,7 +8,7 @@ const curiousNumbers = () => {
 	let res = [];
 
 	for (let i = 1; i <= 999; i++) {
-		num = i.toString().split('').map(Number);
+		num = i.toString().split('').map(Number); // Se convierte 'i' a un string, se separa cada digito y se mapean a tipo numero
 		for (let j = 0; j < num.length; j++) {
 			sum += Math.pow(num[j], 3);
 		}
