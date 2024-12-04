@@ -8,7 +8,7 @@ const decipher = (e) => {
 	// FormData facilita la coleccion de datos del formulario
 	const formData = new FormData(form);
 	const selectedLanguage = formData.get('language');
-	const textToDecipher = formData.get('text');
+	const textToDecipher = formData.get('text').toUpperCase();
 	const rotationNumber = formData.get('level');
 	// Se guardan cada letra en un array a descifrar y mas tarde se meten en el array una vez descifradas
 	const lettersToDecipher = [];
