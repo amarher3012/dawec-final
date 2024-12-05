@@ -18,7 +18,7 @@ const validate = (e) => {
     };
     let isValid = true;
 
-	// Password check
+    // Password check
     if (
         !/^[A-Z](?=.*\d)(?=.*[a-z])[\da-z]{6,}$/.test(
             formData.get('new-password')
@@ -30,7 +30,7 @@ const validate = (e) => {
         document.getElementById('new-password').focus();
     }
 
-	// Pasword repeat check
+    // Pasword repeat check
     if (formData.get('new-password') !== formData.get('new-password-check')) {
         console.log('error_pass_check');
         activeErrors.push(errors.passwordCheckError);
@@ -38,8 +38,8 @@ const validate = (e) => {
         document.getElementById('new-password-check').focus();
     }
 
-	// Hint check
-    if (formData.get('hint').includes(formData.get('new-password'))) {
+    // Hint check
+    if (formData.get('new-password') !== '' && formData.get('hint').includes(formData.get('new-password'))) {
         activeErrors.push(errors.hintError);
         isValid = false;
         document.getElementById('hint').focus();
