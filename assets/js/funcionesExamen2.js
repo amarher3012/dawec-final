@@ -27,7 +27,9 @@ const validate = (e) => {
         console.log(formData.get('new-password'));
         activeErrors.push(errors.passwordError);
         isValid = false;
-        document.getElementById('new-password').focus();
+        if (!activeErrors.includes(errors.passwordCheckError) && !activeErrors.includes(errors.hintError))
+            document.getElementById('new-password').focus();
+
     }
 
     // Pasword repeat check
@@ -35,14 +37,16 @@ const validate = (e) => {
         console.log('error_pass_check');
         activeErrors.push(errors.passwordCheckError);
         isValid = false;
-        document.getElementById('new-password-check').focus();
+        if (!activeErrors.includes(errors.passwordError) && !activeErrors.includes(errors.hintError))
+            document.getElementById('new-password-check').focus();
     }
 
     // Hint check
     if (formData.get('new-password') !== '' && formData.get('hint').includes(formData.get('new-password'))) {
         activeErrors.push(errors.hintError);
         isValid = false;
-        document.getElementById('hint').focus();
+        if (!activeErrors.includes(errors.passwordError) && !activeErrors.includes(errors.passwordCheckError))
+            document.getElementById('hint').focus();
     }
 
     // Se comprueba si isValid es falso, y en su caso alerta de los errores
