@@ -4,7 +4,7 @@ const cipherResult = document.getElementById('cipher-result');
 
 // Ejercicio 3
 
-const decipher = (e) => {	    
+const decipher = (e) => {
 	// FormData facilita la coleccion de datos del formulario
 	const formData = new FormData(form);
 	const selectedLanguage = formData.get('language');
@@ -88,8 +88,8 @@ const decipher = (e) => {
 			if (!letters.includes(letter)) {
 				lettersDeciphered.push(letter);
 			} else {
+				// Se mete en el array la 'letter' que sea index de 'letters' - el numero de rotacion
 				lettersDeciphered.push(
-					// Se mete en el array la 'letter' que sea index de 'letters' - el numero de rotacion
 					letters.at(letters.indexOf(letter) - rotationNumber) // .at() recoje el indice del argumento que se le pasa
 				);
 			}
@@ -104,5 +104,3 @@ const decipher = (e) => {
 };
 
 form.addEventListener('submit', decipher);
-
-// .map
